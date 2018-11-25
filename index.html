@@ -201,6 +201,7 @@
         z-index: 1;
     }
     #large-header {
+        z-index: 0;
         background-image: url("https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/img/demo-1-bg.jpg");
     }
     .main-title {
@@ -209,14 +210,14 @@
         padding: 0;
         color: #f9f1e9;
         text-align: center;
-        top: 40%;
-        left: 60%;
+        top: 50%;
+        left: 50%;
         -webkit-transform: translate3d(-50%, -50%, 0);
         transform: translate3d(-50%, -50%, 0);
     }
     .main-title .left{
-        top: 40%;
-        left: 60%;
+        top: 50%;
+        left: 50%;
     }
     .demo-1 .main-title {
         text-transform: uppercase;
@@ -232,8 +233,63 @@
         }
     }
     </style>
+    <style>
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 5);
+            max-width: 300px;
+            position: fixed;
+            margin: auto;
+            z-index: 1;
+            top: 20%;
+            left: 20%;
+            text-align: center;
+        }
+
+        .title {
+            color: white;
+            z-index: 1;
+            font-size: 18px;
+        }
+
+        button {
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 8px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 22px;
+            color: white;
+        }
+
+        button:hover, a:hover {
+            opacity: 0.7;
+        }
+    </style>
 </head>
 <body>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="card">
+    <img src="https://raw.githubusercontent.com/icanotc/icanotc.github.io/master/vincent.jpg" alt="vincent" style="width:100%">
+    <h1 style="color:white">Vincent</h1>
+    <p class="title">CEO & Founder, Example</p>
+    <p style="color:white">a smart ASIAN</p>
+    <a href="#"><i class="fa fa-dribble"></i></a>
+    <a href="#"><i class="fa fa-twitter"></i></a>
+    <a href="#"><i class="fa fa-linkedin"></i></a>
+    <a href="https://www.instagram.com/i.can.c/?hl=en-us"><i class="fa fa-instagram"></i></a>
+    <p><button>Contact</button></p>
+</div>
+
 <div id="large-header" class="large-header">
     <canvas id="demo-canvas"></canvas>
     <h1 class="main-title">COMING <span class="thin">SOON</span>
